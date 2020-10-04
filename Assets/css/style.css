@@ -1,0 +1,384 @@
+/* 나눔 폰트 적용 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/* 전체 설정 */
+:root{
+    /* Layout */
+    --margin: 28px;
+    --column: 80px;
+    --gutter: 24px;
+	--header: 75px;
+    /* Color */
+    --main-color:#EBB4AD;
+    --sub-color:#423E49;
+    /* Font */
+    --main-font:"나눔스퀘어-extrabold";
+    --contents-font:"나눔스퀘어-regular"
+    /* Font-size */
+    --fsize_nav:20pt;
+    --fsize_banner:60pt;
+    --fsize_subT:44pt;
+    --fsize_link:20pt;
+    --fsize_cont_like:16pt;
+    --fsize_contents:20pt;
+    --fsize_suplink:28pt;
+    --fsize_nav:24pt;
+}
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--sub-color);
+    font-family: var(--main-font);
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: var(--sub-color);
+    text-decoration: none;
+}
+img{
+	display: block;
+}
+    
+@keyframes slider1{
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: -1080px;
+    }
+}
+
+@keyframes slider2{
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: -2160px;
+    }
+}
+
+@keyframes slider3{
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: -3240px;
+    }
+}
+
+@keyframes slider4{
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: -4320px;
+    }
+}
+
+/* 전체 레이아웃 */
+#wrap{
+    height: 100vh;
+    overflow: hidden;
+}
+#wrap #slider{
+    transition: 2s;
+}
+#wrap .slider1{
+    margin-top: -1080px;
+}
+#wrap .slider2{
+    margin-top: -2160px;
+}
+#wrap .slider3{
+    margin-top: -3240px;
+}
+#wrap .slider4{
+    margin-top: -4320px;
+}
+#wrap .slider5{
+    margin-top: -4700px;
+}
+#wrap>div>div{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#header{
+    height: 0;
+    width: 100vw;
+    position: fixed;
+	overflow: hidden;
+}
+#header.headerOn{
+	height: 70px;
+}
+#banner{
+    background: url(../img/banner.jpg);
+    background-position: center center;
+	background-size: cover;
+	background-attachment: local;
+    height: 100vh;
+}
+#contents {
+	height: 4320px;
+	width: 100%;
+	background-position: center center;
+	background-image: url(../img/bg.jpg);
+}
+#footer{
+    height: 500px;
+    background: var(--sub-color);
+}
+.grid{
+    width:1280px;
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+/* header */
+#header .grid.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+#header .nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header .nav ul li{
+    margin: 0 10%;
+}
+#header .nav ul li a{
+    color: #fff;
+    font-size: var(--fsize_nav);
+    font-weight: bold;
+}
+#header .nav ul li a:hover{}
+
+/* banner */
+#banner .grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#banner .grid p{
+    display: block;
+    color: #fff;
+    font-size: var(--fsize_banner);
+    font-weight: bold;
+}
+/* contents */
+#contents>div{
+	height: 1080px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#contents .cont1{
+}
+#contents .cont1 .grid{}
+#contents .cont1 .grid h3{
+    float: left;
+    font-size: var(--fsize_subT);
+}
+#contents .cont1 .grid a{
+    float: right;
+    font-size: var(--fsize_link);
+	font-weight: bold;
+}
+#contents .cont1 .grid .like{
+	width: 100%;
+	height: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#contents .cont1 .grid>div>img{
+	border-radius: 500px;
+}
+#contents .cont1 .grid>div>img:first-child{
+	margin-right:auto;
+	margin-top:auto;
+}
+#contents .cont1 .grid>div>img:last-child{
+	margin-left:auto;
+	margin-bottom:auto;
+}
+#contents .cont2{
+}
+#contents .cont2 .grid h3{
+    font-size: var(--fsize_subT);
+}
+#contents .cont2 .grid div{
+	overflow: hidden;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 6.5vh;
+	width: 125vh;
+	height: 70.3vh;
+}
+#contents .cont2 .grid div iframe{
+	width: 100%;
+	height: 100%;
+}
+#contents .cont2 .grid a{
+	margin-top: 50px;
+    float: right;
+    font-size: var(--fsize_link);
+	font-weight: bold;
+	color: var(--main-color);
+}
+#contents .cont3 .grid{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#contents .cont3 .grid h3{
+	display: block;
+	text-align: center;
+    font-size: var(--fsize_subT);
+	color: var(--main-color);
+}
+#contents .cont3 .grid .shop_box{
+	position: relative;
+}
+#contents .cont3 .grid .shop1{
+	right: 47vw;
+	top: 40vh;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	line-height: 120px;
+	border-radius: 100%;
+	position: absolute;
+	background: var(--sub-color);
+	color: white;
+	font-weight: bold;
+	font-size: var(--fsize_cont_like);
+}
+#contents .cont3 .grid .shop2{
+	right: 2vw;
+	top: 30vh;
+	width: 140px;
+	height: 140px;
+	text-align: center;
+	line-height: 140px;
+	border-radius: 100%;
+	position: absolute;
+	background: white;
+	color: var(--sub-color);
+	font-weight: bold;
+	font-size: var(--fsize_cont_like);
+}
+#contents .cont3 .grid .shop3{
+	right: 12vw;
+	top: 10vh;
+	width: 140px;
+	height: 140px;
+	text-align: center;
+	line-height: 140px;
+	border-radius: 100%;
+	position: absolute;
+	background: white;
+	color: var(--sub-color);
+	font-weight: bold;
+	font-size: var(--fsize_cont_like);
+}
+#contents .cont3 .grid #cont3_img{
+	width:560px;
+	height: 560px;
+	overflow: hidden;
+	border-radius: 100%;
+	box-sizing: border-box;
+	border: 15px solid var(--main-color);
+}
+	#contents .cont3 .grid .cont3_img1 {
+		background: url(../img/contents/catsnack.jpg);
+	}
+#contents .cont4{
+}
+
+#contents .cont4 .grid h3{
+	margin: 0 auto;
+	margin-top: 10vh;
+	display: block;
+	width: 650px;
+	position: relative;
+	text-align: center;
+    font-size: 100px;
+	color: var(--main-color);
+}
+#contents .cont4 .grid h3 img{
+	position: absolute;
+	top:25px;
+	left:0;
+}
+#contents .cont4 .grid>div{
+	margin-top: 5vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#contents .cont4 .grid div>div:nth-child(2){
+	margin: 10%;
+}
+
+#contents .cont4 .grid div>div>img{
+	margin: 0 auto;
+	border-radius: 100%;
+	display: block;
+}
+#contents .cont4 .grid div>div>h5{
+	display: block;
+	text-align: center;
+	font-size: var(--fsize_suplink);
+}
+/* footer */
+#footer .grid{
+    height: 500px;
+	display: flex;
+	flex-wrap: wrap;
+}
+#footer .grid .f_logo{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+#footer .grid .sns{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+#footer .grid .sns button{
+	margin: 0 10px;
+	border: none;
+	background: none;
+	height: 40px;
+	width:40px;
+}
+
+#footer .grid p{
+	display: block;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
