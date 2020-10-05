@@ -265,10 +265,11 @@ header .nav ul li a:hover{}
 #contents .cont2 .container div{
 	overflow: hidden;
 	border-radius: 20px;
+	border: 15px solid var(--sub-color);
 	margin: 0 auto;
 	margin-top: 6.5vh;
-	width: 125vh;
-	height: 70.3vh;
+	width: 100vh;
+	height: 55.5vh;
 }
 
 #contents .cont2 .container div iframe{
