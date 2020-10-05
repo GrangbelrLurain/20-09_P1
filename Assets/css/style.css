@@ -1,5 +1,8 @@
+
 /* 나눔 폰트 적용 */
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+
 /* 전체 설정 */
 :root{
     /* Layout */
@@ -23,6 +26,8 @@
     --fsize_suplink:28pt;
     --fsize_nav:24pt;
 }
+
+
 /* RESET */
 *{
     margin: 0;
@@ -30,21 +35,34 @@
     color: var(--sub-color);
     font-family: var(--main-font);
 }
+
 body{
     margin: 0;
     padding: 0;
 }
+
 li{
     list-style: none;
 }
+
 a{
     color: var(--sub-color);
     text-decoration: none;
 }
+
 img{
 	display: block;
 }
-    
+
+
+/* 전체 레이아웃 */
+#wrap{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* SLIDER */
 @keyframes slider1{
     from{
         margin-top: 0;
@@ -81,44 +99,53 @@ img{
     }
 }
 
-/* 전체 레이아웃 */
-#wrap{
-    height: 100vh;
-    overflow: hidden;
-}
 #wrap #slider{
     transition: 2s;
 }
+
 #wrap .slider1{
     margin-top: -1080px;
 }
+
 #wrap .slider2{
     margin-top: -2160px;
 }
+
 #wrap .slider3{
     margin-top: -3240px;
 }
+
 #wrap .slider4{
     margin-top: -4320px;
 }
+
 #wrap .slider5{
     margin-top: -4700px;
 }
-#wrap>div>div{
+
+
+/* 전체 레이아웃 */
+
+#wrap>div>header,
+#wrap>div>section,
+#wrap>div>footer{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
-#header{
+
+header{
     height: 0;
     width: 100vw;
     position: fixed;
 	overflow: hidden;
 }
-#header.headerOn{
+
+header.headerOn{
 	height: 70px;
 }
+
 #banner{
     background: url(../img/banner.jpg);
     background-position: center center;
@@ -126,101 +153,116 @@ img{
 	background-attachment: local;
     height: 100vh;
 }
+
 #contents {
 	height: 4320px;
 	width: 100%;
 	background-position: center center;
 	background-image: url(../img/bg.jpg);
 }
-#footer{
+
+footer{
     height: 500px;
     background: var(--sub-color);
 }
-.grid{
+
+.container{
     width:1280px;
     max-width: 100vw;
-    height: 100vh;
+	height: 90vh;
     overflow: hidden;
     margin: 0 auto;
     padding: 0;
 }
+
+
 /* header */
-#header .grid.nav{
+header .container.nav{
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;}
 
-#header .nav ul{
+header .nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#header .nav ul li{
+
+header .nav ul li{
     margin: 0 10%;
 }
-#header .nav ul li a{
+
+header .nav ul li a{
     color: #fff;
     font-size: var(--fsize_nav);
     font-weight: bold;
 }
-#header .nav ul li a:hover{}
+
+header .nav ul li a:hover{}
 
 /* banner */
-#banner .grid{
+#banner .container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#banner .grid p{
+
+#banner .container p{
     display: block;
     color: #fff;
     font-size: var(--fsize_banner);
     font-weight: bold;
 }
+
+
 /* contents */
-#contents>div{
+#contents>article{
 	height: 1080px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-#contents .cont1{
-}
-#contents .cont1 .grid{}
-#contents .cont1 .grid h3{
+
+#contents .cont1 .container h3{
     float: left;
     font-size: var(--fsize_subT);
 }
-#contents .cont1 .grid a{
+
+#contents .cont1 .container a{
     float: right;
     font-size: var(--fsize_link);
 	font-weight: bold;
 }
-#contents .cont1 .grid .like{
+
+#contents .cont1 .container .like{
 	width: 100%;
 	height: 75%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-#contents .cont1 .grid>div>img{
+
+#contents .cont1 .container>div>img{
 	border-radius: 500px;
 }
-#contents .cont1 .grid>div>img:first-child{
+
+#contents .cont1 .container>div>img:first-child{
 	margin-right:auto;
 	margin-top:auto;
 }
-#contents .cont1 .grid>div>img:last-child{
+
+#contents .cont1 .container>div>img:last-child{
 	margin-left:auto;
 	margin-bottom:auto;
 }
-#contents .cont2{
-}
-#contents .cont2 .grid h3{
+
+#contents .cont2 .container h3{
     font-size: var(--fsize_subT);
+	margin-bottom: auto;
 }
-#contents .cont2 .grid div{
+
+#contents .cont2 .container div{
 	overflow: hidden;
 	border-radius: 20px;
 	margin: 0 auto;
@@ -228,33 +270,39 @@ img{
 	width: 125vh;
 	height: 70.3vh;
 }
-#contents .cont2 .grid div iframe{
+
+#contents .cont2 .container div iframe{
 	width: 100%;
 	height: 100%;
 }
-#contents .cont2 .grid a{
+
+#contents .cont2 .container a{
 	margin-top: 50px;
     float: right;
     font-size: var(--fsize_link);
 	font-weight: bold;
 	color: var(--main-color);
 }
-#contents .cont3 .grid{
+
+#contents .cont3 .container{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
-#contents .cont3 .grid h3{
+
+#contents .cont3 .container h3{
 	display: block;
 	text-align: center;
     font-size: var(--fsize_subT);
 	color: var(--main-color);
 }
-#contents .cont3 .grid .shop_box{
+
+#contents .cont3 .container .shop_box{
 	position: relative;
 }
-#contents .cont3 .grid .shop1{
+
+#contents .cont3 .container .shop1{
 	right: 47vw;
 	top: 40vh;
 	width: 120px;
@@ -268,7 +316,8 @@ img{
 	font-weight: bold;
 	font-size: var(--fsize_cont_like);
 }
-#contents .cont3 .grid .shop2{
+
+#contents .cont3 .container .shop2{
 	right: 2vw;
 	top: 30vh;
 	width: 140px;
@@ -282,7 +331,8 @@ img{
 	font-weight: bold;
 	font-size: var(--fsize_cont_like);
 }
-#contents .cont3 .grid .shop3{
+
+#contents .cont3 .container .shop3{
 	right: 12vw;
 	top: 10vh;
 	width: 140px;
@@ -296,7 +346,8 @@ img{
 	font-weight: bold;
 	font-size: var(--fsize_cont_like);
 }
-#contents .cont3 .grid #cont3_img{
+
+#contents .cont3 .container #cont3_img{
 	width:560px;
 	height: 560px;
 	overflow: hidden;
@@ -304,13 +355,12 @@ img{
 	box-sizing: border-box;
 	border: 15px solid var(--main-color);
 }
-	#contents .cont3 .grid .cont3_img1 {
+
+#contents .cont3 .container .cont3_img1 {
 		background: url(../img/contents/catsnack.jpg);
-	}
-#contents .cont4{
 }
 
-#contents .cont4 .grid h3{
+#contents .cont4 .container h3{
 	margin: 0 auto;
 	margin-top: 10vh;
 	display: block;
@@ -320,39 +370,45 @@ img{
     font-size: 100px;
 	color: var(--main-color);
 }
-#contents .cont4 .grid h3 img{
+
+#contents .cont4 .container h3 img{
 	position: absolute;
 	top:25px;
 	left:0;
 }
-#contents .cont4 .grid>div{
+
+#contents .cont4 .container>div{
 	margin-top: 5vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-#contents .cont4 .grid div>div:nth-child(2){
+#contents .cont4 .container div>div:nth-child(2){
 	margin: 10%;
 }
 
-#contents .cont4 .grid div>div>img{
+#contents .cont4 .container div>div>img{
 	margin: 0 auto;
 	border-radius: 100%;
 	display: block;
 }
-#contents .cont4 .grid div>div>h5{
+
+#contents .cont4 .container div>div>h5{
 	display: block;
 	text-align: center;
 	font-size: var(--fsize_suplink);
 }
+
+
 /* footer */
-#footer .grid{
+footer .container{
     height: 500px;
 	display: flex;
 	flex-wrap: wrap;
 }
-#footer .grid .f_logo{
+
+footer .container .f_logo{
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -360,7 +416,7 @@ img{
 	margin: 0;
 }
 
-#footer .grid .sns{
+footer .container .sns{
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -368,7 +424,7 @@ img{
 	margin: 0;
 }
 
-#footer .grid .sns button{
+footer .container .sns button{
 	margin: 0 10px;
 	border: none;
 	background: none;
@@ -376,7 +432,7 @@ img{
 	width:40px;
 }
 
-#footer .grid p{
+footer .container p{
 	display: block;
 	width: 100%;
 	color: white;

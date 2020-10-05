@@ -7,9 +7,9 @@
 </head>
 <body>
 <div id="wrap">
-    <div id="slider"class="slider">
-        <div id="header">
-            <div class="grid nav">
+    <div id="slider" class="slider">
+        <header>
+            <div class="container nav">
                 <ul>
                     <li><a href="/cats.html">Cats</a></li>
                     <li><a href="/Guardian.html">Guardian</a></li>
@@ -18,15 +18,15 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
-        </div>
-        <div id="banner">
-            <div class="grid">
+        </header>
+        <section id="banner">
+            <div class="container">
                 <p>고양이님들이 집사를 기다립니다.</p>
             </div>
-        </div>
-        <div id="contents">
-            <div class="cont1">
-                <div class="grid">
+        </section>
+        <section id="contents">
+            <article class="cont1">
+                <div class="container">
                     <div class="text">
                         <h3>당신의 고양이님이<br>
                         어떤걸 좋아하시는지 아시나요?</h3>
@@ -38,18 +38,18 @@
                         <img src="Assets/img/contents/like3.png" alt="Cat meal">
                     </div>
                 </div>
-            </div><!-- //cont1 -->
-            <div class="cont2">
-                <div class="grid">
+            </article><!-- //cont1 -->
+            <article class="cont2">
+                <div class="container">
                     <h3>고양이님들을 보필하는 집사님들을 소개합니다.</h3>
                     <div>
                         <iframe id="youtube_frame" src="https://www.youtube.com/embed/_MVBOrtcNis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <a href="/Guardian.html">집사들 구경하러 가기</a>
                 </div>
-            </div><!-- //cont2 -->
-            <div class="cont3">
-                <div class="grid">
+            </article><!-- //cont2 -->
+            <article class="cont3">
+                <div class="container">
                     <h3>고양이님들은 집사의 결제를 기다립니다.</h3>
                     <div class="shop_box">
                         <div class="shop1">식사</div>
@@ -63,9 +63,9 @@
 
                     </div>
                 </div>
-            </div><!-- //cont3 -->
-            <div class="cont4">
-                <div class="grid">
+            </article><!-- //cont3 -->
+            <article class="cont4">
+                <div class="container">
                     <h3><img src="layout/contents/cat-hello.jpg" alt="">Support</h3>
                     <div>
                         <div class="link1">
@@ -81,11 +81,11 @@
                             <h5>병원안내</h5>
                         </div>
                     </div><!-- //Support Image Wrap Box -->
-                </div><!-- //Grid Box -->
-            </div><!-- //cont4 -->
-        </div><!-- // CONTENTS -->
-        <div id="footer">
-            <div class="grid">
+                </div><!-- //container Box -->
+            </article><!-- //cont4 -->
+		</section><!-- // CONTENTS -->
+        <footer>
+            <div class="container">
             <div class="f_logo">
                 <img src="Assets/img/logo.png" alt="footer logo">
             </div>
@@ -100,12 +100,13 @@
             copylightⓒHelloMorning
             </p>
             </div>
-        </div><!-- // FOOTER -->
+        </footer><!-- // FOOTER -->
     </div><!-- // Slider-->
 </div><!-- // WRAP -->
 <script>
     function slideDiv(event){
         slider.removeEventListener("wheel", slideDiv);
+		
         console.log(slider.classList.item(0));
         if(event.deltaY > 0 && slider.classList.item(0) === "slider"){
             slider.classList.remove("slider");
@@ -151,10 +152,60 @@
             slider.addEventListener("wheel",slideDiv);
         },1000);
     }
-    
+	
+    function slideDiv2(event){
+        slider.removeEventListener("deviceorientation", slideDiv);
+		
+        console.log(slider.classList.item(0));
+        if(event.deltaY > 0 && slider.classList.item(0) === "slider"){
+            slider.classList.remove("slider");
+            slider.classList.add("slider1");
+        }else
+        if(event.deltaY > 0 && slider.classList.item(0) === "slider1"){
+            slider.classList.remove("slider1");
+            slider.classList.add("slider2");
+        }else
+        if(event.deltaY > 0 && slider.classList.item(0) === "slider2"){
+            slider.classList.remove("slider2");
+            slider.classList.add("slider3");
+        }else
+        if(event.deltaY > 0 && slider.classList.item(0) === "slider3"){
+            slider.classList.remove("slider3");
+            slider.classList.add("slider4");
+        }else
+        if(event.deltaY > 0 && slider.classList.item(0) === "slider4"){
+            slider.classList.remove("slider4");
+            slider.classList.add("slider5");
+        }else
+        if(event.deltaY < 0 && slider.classList.item(0) === "slider1"){
+            slider.classList.remove("slider1");
+            slider.classList.add("slider");
+        }else
+        if(event.deltaY < 0 && slider.classList.item(0) === "slider2"){
+            slider.classList.remove("slider2");
+            slider.classList.add("slider1");
+        }else
+        if(event.deltaY < 0 && slider.classList.item(0) === "slider3"){
+            slider.classList.remove("slider3");
+            slider.classList.add("slider2");
+        }else
+        if(event.deltaY < 0 && slider.classList.item(0) === "slider4"){
+            slider.classList.remove("slider4");
+            slider.classList.add("slider3");
+        }else
+        if(event.deltaY < 0 && slider.classList.item(0) === "slider5"){
+            slider.classList.remove("slider5");
+            slider.classList.add("slider4");
+        }
+        setTimeout(function(){
+            slider.addEventListener("deviceorientation",slideDiv);
+        },1000);
+    }
+	
     const slider = document.getElementById("slider");
     
     slider.addEventListener("wheel",slideDiv);
+    slider.addEventListener("deviceorientation",slideDiv2);
 </script>
 </body>
 </html>
