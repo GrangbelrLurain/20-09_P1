@@ -125,7 +125,6 @@ header{
 
 #contents {
 	height: 4320px;
-	width: 100%;
 	background-position: center center;
 	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat;
@@ -221,21 +220,49 @@ header .nav ul:hover li a
 	justify-content: center;
 }
 
-#contents .cont1 .container>div>img{
-	border-radius: 500px;
+#contents .cont1 .container>div>div{
+	height: 377px;
+	width: 377px;
+	border-radius: 100%;
+	transition: 0.4s;
+	overflow: hidden;
+	cursor: pointer;
 }
 
-#contents .cont1 .container>div>img:first-child{
+#contents .cont1 .container>div>div:nth-of-type(1){
 	margin-right:auto;
 	margin-top:auto;
+	background-image: url(../img/contents/like1.png)
 }
 
-#contents .cont1 .container>div>img:last-child{
+#contents .cont1 .container>div>div:nth-of-type(2){
+	background-image: url(../img/contents/like2.png)
+}
+#contents .cont1 .container>div>div:nth-of-type(3){
 	margin-left:auto;
 	margin-bottom:auto;
+	background-image: url(../img/contents/like3.png)
 }
 
+#contents .cont1 .container>div>div:hover{
+	transform: scale(1.1);
+}
 
+#contents .cont1 .container>div>div>p{
+	margin-top: 250px;
+	padding: 20px 30px 100px 30px;
+	display: block;
+	background: rgba(0,0,0,0.3);
+	color:white;
+	text-align: center;
+	font-size: var(--fsize_cont_like);
+	font-weight: bold;
+	opacity: 0;
+	transition: 0.4s;
+}
+#contents .cont1 .container>div>div:hover>p{
+	opacity: 1;
+}
 /*********** CONT2 ***********/
 #contents .cont2 .container h3{
 	margin-top: 130px;
@@ -421,4 +448,10 @@ footer .container p{
 	width: 100%;
 	color: white;
 	text-align: center;
+}
+
+@media(max-width:700px){
+	#contents{
+		display: none;
+	}
 }
