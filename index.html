@@ -2,43 +2,44 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cat Supporters</title>
-<link rel="stylesheet" href="/Assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="Assets/css/style.css" type="text/css">
 </head>
 <body>
 <div id="wrap">
-    <div id="slider" class="slider">
-        <header>
+        <header id="nav" class="type-A">
             <div class="container nav">
                 <ul>
                     <li><a href="/cats.html">Cats</a></li>
                     <li><a href="/Guardian.html">Guardian</a></li>
-                    <li><img src="layout/h_logo.png" alt="logo"></li>
+                    <li><img src="Assets/img/h_logo.png" alt="logo"></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
-        </header>
+        </header><!-- ********** //HEADER ********** -->
+    <div id="slider" class="slider">
         <section id="banner">
             <div class="container">
                 <p>고양이님들이 집사를 기다립니다.</p>
             </div>
-        </section>
+        </section><!-- ********** //BANNER ********** -->
         <section id="contents">
             <article class="cont1">
                 <div class="container">
                     <div class="text">
                         <h3>당신의 고양이님이<br>
                         어떤걸 좋아하시는지 아시나요?</h3>
-                        <a href="/cats.html">집사가이드 바로가기</a>
+                        <a href="/cats.html">집사가이드 바로가기<img src="" alt=""></a>
                     </div>
                     <div class="like" href="/cats.html">
                         <img src="Assets/img/contents/like1.png" alt="Sleep Cats">
                         <img src="Assets/img/contents/like2.png" alt="High Five Cats">
                         <img src="Assets/img/contents/like3.png" alt="Cat meal">
                     </div>
-                </div>
-            </article><!-- //cont1 -->
+                </div><!-- **********//CONT1 CONTAINER ********** -->
+            </article><!-- **********//CONT1********** -->
             <article class="cont2">
                 <div class="container">
                     <h3>고양이님들을 보필하는 집사님들을 소개합니다.</h3>
@@ -46,8 +47,8 @@
                         <iframe id="youtube_frame" src="https://www.youtube.com/embed/_MVBOrtcNis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <a href="/Guardian.html">집사들 구경하러 가기</a>
-                </div>
-            </article><!-- //cont2 -->
+                </div><!-- **********//CONT2 CONTAINER ********** -->
+            </article><!-- **********//CONT2********** -->
             <article class="cont3">
                 <div class="container">
                     <h3>고양이님들은 집사의 결제를 기다립니다.</h3>
@@ -58,42 +59,40 @@
                     </div>
                     <div id="cont3_img" class="cont3_img1">
                     </div>
-
                     <div class="cont3_text">
-
                     </div>
-                </div>
-            </article><!-- //cont3 -->
+                </div><!-- **********//CONT3 CONTAINER **********-->
+            </article><!-- **********//cont3********** -->
             <article class="cont4">
                 <div class="container">
-                    <h3><img src="layout/contents/cat-hello.jpg" alt="">Support</h3>
+                    <h3><img src="Assets/img/contents/cat-hello.jpg" alt="hello cat img">Support</h3>
                     <div>
                         <div class="link1">
-                            <img src="/Assets/img/contents/cat-link1.jpg" alt="link1">
+                            <img src="Assets/img/contents/cat-link1.jpg" alt="link1">
                             <h5>집사<span>해지/등록</span></h5>
                         </div>
                         <div class="link2">
-                            <img src="/Assets/img/contents/cat-link2.jpg" alt="link2">
+                            <img src="Assets/img/contents/cat-link2.jpg" alt="link2">
                             <h5>상점안내</h5>
                         </div>
                             <div class="link3">
-                            <img src="/Assets/img/contents/cat-link3.jpg" alt="link3">
+                            <img src="Assets/img/contents/cat-link3.jpg" alt="link3">
                             <h5>병원안내</h5>
                         </div>
-                    </div><!-- //Support Image Wrap Box -->
-                </div><!-- //container Box -->
-            </article><!-- //cont4 -->
-		</section><!-- // CONTENTS -->
+                    </div><!-- **********//Support Image Wrap Box********** -->
+                </div><!-- **********//CONT4 CONTAINER ********** -->
+            </article><!-- **********//CONT4********** -->
+		</section><!-- **********// CONTENTS********** -->
         <footer>
             <div class="container">
             <div class="f_logo">
                 <img src="Assets/img/logo.png" alt="footer logo">
             </div>
             <div class="sns">
-                <button><img src="/Assets/img/sns_f.png"></button>
-                <button><img  src="/Assets/img/sns_i.png"></button>
-                <button><img  src="/Assets/img/sns_t.png"></button>
-                <button><img  src="/Assets/img/sns_y.png"></button>
+                <button><img src="Assets/img/sns_f.png"></button>
+                <button><img  src="Assets/img/sns_i.png"></button>
+                <button><img  src="Assets/img/sns_t.png"></button>
+                <button><img  src="Assets/img/sns_y.png"></button>
             </div>
             <p class="copy">
             인천광역시 부평구/1544-0000<br>
@@ -103,11 +102,10 @@
         </footer><!-- // FOOTER -->
     </div><!-- // Slider-->
 </div><!-- // WRAP -->
-<script>
+<script>///***********!!SCRIPT!!***********///
     function slideDiv(event){
         slider.removeEventListener("wheel", slideDiv);
 		
-        console.log(slider.classList.item(0));
         if(event.deltaY > 0 && slider.classList.item(0) === "slider"){
             slider.classList.remove("slider");
             slider.classList.add("slider1");
@@ -153,59 +151,11 @@
         },1000);
     }
 	
-    function slideDiv2(event){
-        slider.removeEventListener("deviceorientation", slideDiv);
-		
-        console.log(slider.classList.item(0));
-        if(event.deltaY > 0 && slider.classList.item(0) === "slider"){
-            slider.classList.remove("slider");
-            slider.classList.add("slider1");
-        }else
-        if(event.deltaY > 0 && slider.classList.item(0) === "slider1"){
-            slider.classList.remove("slider1");
-            slider.classList.add("slider2");
-        }else
-        if(event.deltaY > 0 && slider.classList.item(0) === "slider2"){
-            slider.classList.remove("slider2");
-            slider.classList.add("slider3");
-        }else
-        if(event.deltaY > 0 && slider.classList.item(0) === "slider3"){
-            slider.classList.remove("slider3");
-            slider.classList.add("slider4");
-        }else
-        if(event.deltaY > 0 && slider.classList.item(0) === "slider4"){
-            slider.classList.remove("slider4");
-            slider.classList.add("slider5");
-        }else
-        if(event.deltaY < 0 && slider.classList.item(0) === "slider1"){
-            slider.classList.remove("slider1");
-            slider.classList.add("slider");
-        }else
-        if(event.deltaY < 0 && slider.classList.item(0) === "slider2"){
-            slider.classList.remove("slider2");
-            slider.classList.add("slider1");
-        }else
-        if(event.deltaY < 0 && slider.classList.item(0) === "slider3"){
-            slider.classList.remove("slider3");
-            slider.classList.add("slider2");
-        }else
-        if(event.deltaY < 0 && slider.classList.item(0) === "slider4"){
-            slider.classList.remove("slider4");
-            slider.classList.add("slider3");
-        }else
-        if(event.deltaY < 0 && slider.classList.item(0) === "slider5"){
-            slider.classList.remove("slider5");
-            slider.classList.add("slider4");
-        }
-        setTimeout(function(){
-            slider.addEventListener("deviceorientation",slideDiv);
-        },1000);
-    }
 	
-    const slider = document.getElementById("slider");
+	let headerNav = document.getElementById("nav");
+    let slider = document.getElementById("slider");
     
     slider.addEventListener("wheel",slideDiv);
-    slider.addEventListener("deviceorientation",slideDiv2);
 </script>
 </body>
 </html>
