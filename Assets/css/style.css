@@ -33,8 +33,28 @@
     --fsize_suplink:28pt;
     --fsize_nav:24pt;
 }
+/*********** ICON ***********/
 
+.iconRight{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	transform: rotate(45deg);
+	background: none;
+	border-left: 0;
+	border-bottom: 0;
+	cursor: pointer;
+}
 
+.iconRight.mainC{
+	border-right: 5px solid var(--main-color);
+	border-top: 5px solid var(--main-color);
+}
+
+.iconRight.subC{
+	border-right: 5px solid var(--sub-color);
+	border-top: 5px solid var(--sub-color);
+}
 /*********** RESET ***********/
 *{
     margin: 0;
@@ -198,23 +218,21 @@ header .nav ul:hover li a
 	justify-content: center;
 }
 
+#contents .cont1 .container{
+	position: relative;
+	display: flex;
+}
+
 #contents .cont1 .container h3{
 	margin-top: 100px;
-    float: left;
     font-size: var(--fsize_subT);
 }
 
-#contents .cont1 .container a{
-	margin-top: 100px;
-    float: right;
-    font-size: var(--fsize_link);
-	font-weight: bold;
-}
-
 #contents .cont1 .container .like{
+	top:150px;
 	width: 100%;
-	height: 75%;
-	margin-top: -200px;
+	height: 80%;
+	position:absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -250,7 +268,7 @@ header .nav ul:hover li a
 
 #contents .cont1 .container>div>div>p{
 	margin-top: 250px;
-	padding: 20px 30px 100px 30px;
+	padding: 10px 30px 100px 30px;
 	display: block;
 	background: rgba(0,0,0,0.3);
 	color:white;
@@ -262,6 +280,18 @@ header .nav ul:hover li a
 }
 #contents .cont1 .container>div>div:hover>p{
 	opacity: 1;
+}
+
+#contents .cont1 .container a{
+	margin-left: auto;
+	margin-top: auto;
+    font-size: var(--fsize_link);
+	font-weight: bold;
+	transition: 0.4s;
+}
+
+#contents .cont1 .container a:hover{
+	transform: scale(1.1);
 }
 /*********** CONT2 ***********/
 #contents .cont2 .container h3{
@@ -290,7 +320,7 @@ header .nav ul:hover li a
     float: right;
     font-size: var(--fsize_link);
 	font-weight: bold;
-	color: var(--main-color);
+	color: var(--main-color);	
 }
 
 
@@ -312,6 +342,11 @@ header .nav ul:hover li a
 	display: flex;
 	width: inherit;
 	height: inherit;
+}
+
+#contents .cont3 .container>div>div{
+	transition: 0.4s;
+	cursor:wait;
 }
 
 #contents .cont3 .container .shop1{
@@ -355,6 +390,10 @@ header .nav ul:hover li a
 	font-size: var(--fsize_cont_like);
 }
 
+#contents .cont3 .container>div>div:hover{
+	transform: scale(1.2);
+}
+
 #contents .cont3 .container #cont3_img{
 	width:560px;
 	height: 560px;
@@ -393,6 +432,7 @@ header .nav ul:hover li a
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 #contents .cont4 .container div>div:nth-child(2){
@@ -411,6 +451,13 @@ header .nav ul:hover li a
 	font-size: var(--fsize_suplink);
 }
 
+#contents .cont4 .container div>div{
+	transition: 0.4s;
+}
+
+#contents .cont4 .container div>div:hover{
+	transform: scale(1.1);
+}
 
 /*********** footer ***********/
 footer .container{
