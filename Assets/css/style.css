@@ -320,7 +320,12 @@ header .nav ul:hover li a
     float: right;
     font-size: var(--fsize_link);
 	font-weight: bold;
-	color: var(--main-color);	
+	color: var(--main-color);
+	transition: 0.4s;
+}
+
+#contents .cont2 .container a:hover{
+	transform: scale(1.1);
 }
 
 
