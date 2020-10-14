@@ -4,7 +4,12 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 
-/*********** 전체 설정 ***********/
+
+
+
+
+
+					/*********** 전체 설정 ***********/
 :root{
     /*********** Layout ***********/
     --margin: 28px;
@@ -33,29 +38,14 @@
     --fsize_suplink:28pt;
     --fsize_nav:24pt;
 }
-/*********** ICON ***********/
 
-.iconRight{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	transform: rotate(45deg);
-	background: none;
-	border-left: 0;
-	border-bottom: 0;
-	cursor: pointer;
-}
 
-.iconRight.mainC{
-	border-right: 5px solid var(--main-color);
-	border-top: 5px solid var(--main-color);
-}
 
-.iconRight.subC{
-	border-right: 5px solid var(--sub-color);
-	border-top: 5px solid var(--sub-color);
-}
-/*********** RESET ***********/
+
+
+
+
+					/*********** RESET ***********/
 *{
     margin: 0;
     padding: 0;
@@ -82,7 +72,37 @@ img{
 }
 
 
-/*********** SLIDER ***********/
+
+
+
+					/*********** ICON ***********/
+
+.iconRight{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	transform: rotate(45deg);
+	background: none;
+	border-left: 0;
+	border-bottom: 0;
+	cursor: pointer;
+}
+
+.iconRight.mainC{
+	border-right: 5px solid var(--main-color);
+	border-top: 5px solid var(--main-color);
+}
+
+.iconRight.subC{
+	border-right: 5px solid var(--sub-color);
+	border-top: 5px solid var(--sub-color);
+}
+
+
+
+
+					/*********** SLIDER ***********/
+
 @media (min-width:1200px) and (min-height:900px){
 #wrap{
     height: 100vh;
@@ -116,7 +136,10 @@ img{
 }
 
 
-/*********** 전체 레이아웃 ***********/
+
+
+
+					/*********** 전체 레이아웃 ***********/
 
 #wrap>div>header,
 #wrap>div>footer{
@@ -130,7 +153,7 @@ header{
     height:0;
     width: 100vw;
     position:fixed;
-	z-index: 100;
+	z-index: 99;
 }
 #banner{
     background: url(../img/banner.jpg);
@@ -164,30 +187,34 @@ footer{
 }
 
 
-/*********** HEADER ***********/
+
+
+
+					/*********** HEADER ***********/
+
 header .container{
 	height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header .nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	opacity: 0.2;
 	transition: 0.6s;
 }
 
 header .nav ul li{
-    margin: 0 10%;
+	margin: 0 10%;
 }
 
 header .nav ul li a{
-    color: #fff;
-    font-size: var(--fsize_nav);
-    font-weight: bold;
+	color: #fff;
+	font-size: var(--fsize_nav);
+	font-weight: bold;
 	transition: 0.6s;
 }
 
@@ -200,7 +227,9 @@ header .nav ul:hover li a
 }
 
 
-/*********** !!BANNER!! ***********/
+
+					/*********** !!BANNER!! ***********/
+
 #banner .container{
     display: flex;
     align-items: center;
@@ -215,7 +244,9 @@ header .nav ul:hover li a
 }
 
 
-/*********** !!CONTENTS!! ***********/
+
+
+					/*********** !!CONTENTS!! ***********/
 #contents>article{
 	height: 1080px;
 	display: flex;
@@ -298,7 +329,11 @@ header .nav ul:hover li a
 #contents .cont1 .container a:hover{
 	transform: scale(1.1);
 }
-/*********** CONT2 ***********/
+
+
+
+
+					/*********** CONT2 ***********/
 #contents .cont2 .container h3{
 	margin-top: 130px;
     font-size: var(--fsize_subT);
@@ -334,7 +369,7 @@ header .nav ul:hover li a
 }
 
 
-/*********** CONT3 ***********/
+					/*********** CONT3 ***********/
 #contents .cont3 .container{
 	position: relative;
 }
@@ -440,7 +475,9 @@ header .nav ul:hover li a
 }
 
 
-/*********** CONT4 ***********/
+
+
+					/*********** CONT4 ***********/
 #contents .cont4 .container h3{
 	margin: 0 auto;
 	margin-top: 150px;
@@ -490,7 +527,10 @@ header .nav ul:hover li a
 	transform: scale(1.1);
 }
 
-/*********** footer ***********/
+
+
+
+					/*********** footer ***********/
 footer .container{
     height: 500px;
 	display: flex;

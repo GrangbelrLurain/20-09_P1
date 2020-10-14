@@ -3,7 +3,7 @@ const shopBoxText = document.querySelectorAll(".cont3_text>p")
 const shopBoxImg = document.querySelector("#cont3_img")
 
 function shopBoxTextOn(){
-	const selector = this
+	const selector = this;
 	
 	shopBox.forEach(function(elem, index){
 		if(elem == selector){
