@@ -79,3 +79,11 @@
     left: 0;
     bottom: 14px;
 }
+
+/*********** lINK2_LAYER ***********/
+
+.link2_layer{
+    margin: 0 auto;
+    transform: translateY(50%);
+    position: relative;
+}
