@@ -3,7 +3,7 @@ const layerOnBtn = document.querySelectorAll(".cont4>div>div>div")
 
 function layerOn (){
     const layer = document.getElementById("layer");
-    layer.style.display = "block";
+    layer.style.display = "flex";
 }
 
 layerOnBtn.forEach(function(Elem){
