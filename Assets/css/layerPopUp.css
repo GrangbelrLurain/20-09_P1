@@ -7,7 +7,7 @@
     height: 100%;
     background-color: rgba(0,0,0,0.4);
 }
-
+                            /********** LINK 1 LAYER **********/
 .link1_layer{
     width: 500px;
     height: 400px;
@@ -15,10 +15,12 @@
     margin: 0 auto;
     transform: translateY(50%);
     display: flex;
+    display: none;
     position: relative;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 130px;
+    border: 5px solid var(--main-color);
     background: var(--sub-color);
 }
 .link1_layer h4{
@@ -31,22 +33,49 @@
     width: 400px;
     height: 300px;
     background-color: rgba(255,255,255,0.2);
-    border-radius: 5px;
+    border-radius: 100px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
 }
 
-.link1_layer .textArea>input,
-.link1_layer .textArea>div{
-    margin: auto 0;
-    width: 200px;
+.link1_layer .textArea div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.link1_layer .summit{
+.link1_form{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.link1_form label{
+    color: white;
+}
+
+.link1_layer form>input,
+.link1_form_exit>input{
+    background: var(--main-color);
+    border:0;
+    border-radius: 5px;
+    padding: 3px 10px;
+    color:white;
+    font-weight: bold;
+}
+
+.textArea form>input{
+    margin-bottom: 5px;
+}
+
+.textArea form>.link1_form_exit{
     position: absolute;
-    bottom: 15px;
+    width:100%;
+    left: 0;
+    bottom: 14px;
 }

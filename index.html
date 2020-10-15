@@ -20,23 +20,42 @@
 			</ul>
 		</div>
     </header><!-- ********** //HEADER ********** -->
-    <section id="layer">
+        <section id="layer">
         <article class="link1_layer">
             <h4>고양이 집사 계약 등록</h4>
             <div class="textArea">
-                <input type="text" title="집사등록" value="이름" id="newSurporter">
-                <input type="text" title="집사등록" value="나이" id="">
-                <input type="text" title="집사등록" value="사는 곳" id="">
-                <input type="text" title="집사등록" value="모시고 싶은 고양이님" id="">
-                <input type="button" value="고양이 서포터즈 집사 등록 약관">
-                <div>계약에 동의합니다. <input type="checkbox" value="계약에 동의함"></div>
-            </div>
-            <div class="summit">
-                <input type="button" value="취소">
-                <input type="button" value="등록완료">
+                <form action="">
+                    <div class="link1_form">
+                        <label for="name">이름</label>
+                        <input type="text" name="name" title="집사등록" value="이름" id="newSurporter" onclick=this.value=''>
+                    </div>
+                    <div class="link1_form">
+                        <label for="age">나이</label>
+                        <input type="text" name="age" title="집사등록" value="나이" id="" onclick=this.value=''>
+                    </div>
+                    <div class="link1_form">
+                        <label for="location">사는 곳</label>
+                        <input type="text" name="location" title="집사등록" value="사는 곳" id="" onclick=this.value=''>
+                    </div>
+                    <div class="link1_form">
+                        <label for="cats">고양이</label>
+                        <input type="text" name="cats" title="집사등록" value="모시고 싶은 고양이님" id="" onclick=this.value=''>
+                    </div>
+                    <input type="button" value="고양이 서포터즈 집사 등록 약관">
+                    <div class="link1_form">
+                        <label for="agree">계약에 동의합니다.</label>
+                        <input type="checkbox" name="agree">
+                    </div>
+                    <div class="link1_form_exit">
+                        <input type="reset" value="취소" class="layer_exit">
+                        <input type="reset" value="등록완료" class="layer_exit">
+                    </div>
+                </form>
             </div> 
         </article>
-        <article class="link2_layer"></article>
+        <article class="link2_layer">
+            <div id="map" style="width:500px;height:400px;"></div>
+        </article>
         <article class="link3_layer"></article>
     </section>
 	<div id="slider" class="slider">
@@ -143,7 +162,21 @@
 </div><!-- // WRAP -->
 <script type="text/javascript" src="Assets/js/wheelEvent.js"></script>
 <script type="text/javascript" src="Assets/js/cont3Hover.js"></script>
+<script type="text/javascript" src="Assets/js/layerPopUp.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=142c0992495e1e0122781be94e608010"></script>
 <script>
-	document.addEventListener('keydown', function(){if(event.keyCode == 9){alert("이 페이지는 TAP키를 지원하지 않습니다.";)}});</script>
+var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+var options = { //지도를 생성할 때 필요한 기본 옵션
+	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+	level: 3 //지도의 레벨(확대, 축소 정도)
+};
+
+var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+</script>
+<script>
+    document.addEventListener('keydown', function(){
+        if(event.keyCode == 9){alert("이 페이지는 TAP키를 지원하지 않습니다.";)}})
+</script>
+
 </body>
 </html>
