@@ -83,5 +83,15 @@
 /*********** lINK2_LAYER ***********/
 
 .link2_layer{
-    
+    background: #000;
+}
+
+.link2_layer .layer_exit{
+    width: 300px;
+    height: 100px;
+}
+
+.link3_layer .layer_exit{
+    width:300px;
+    height: 100px;
 }
