@@ -177,15 +177,11 @@ var options = { //지도를 생성할 때 필요한 기본 옵션
 };
 
 var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-var places = new kakao.maps.services.Places(map);
+var places = new kakao.maps.services.Places();
 
-var callback = function(result, status) {
-    if (status === kakao.maps.services.Status.OK) {
-        console.log(result);
-    }
-};
+places.setMap(map);
 
-places.keywordSearch('동물병원', placesSearchCB);
+places.keywordSearch('동물병원', map);
 
 </script>
 <script>
