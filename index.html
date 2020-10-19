@@ -168,11 +168,12 @@
 <script type="text/javascript" src="Assets/js/cont3Hover.js"></script>
 <script type="text/javascript" src="Assets/js/layerPopUp.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=142c0992495e1e0122781be94e608010"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
 <script>
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 var options = { //지도를 생성할 때 필요한 기본 옵션
 	center: new kakao.maps.LatLng(37.545038, 126.846919), //지도의 중심좌표.
-	level: 9 //지도의 레벨(확대, 축소 정도)
+	level: 13 //지도의 레벨(확대, 축소 정도)
 };
 
 var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
@@ -184,7 +185,8 @@ var callback = function(result, status) {
     }
 };
 
-ps.keywordSearch('동물병원', placesSearchCB);
+places.keywordSearch('동물병원', placesSearchCB);
+
 </script>
 <script>
     document.addEventListener('keydown', function(){
