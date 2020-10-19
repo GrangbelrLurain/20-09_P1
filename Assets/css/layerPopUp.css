@@ -82,7 +82,7 @@
 /*********** lINK2_LAYER ***********/
 
 .link2_layer {
-  width: 80vw
+  width: 80vw;
   height: 80vh;
   position: relative;
   display: flex;
