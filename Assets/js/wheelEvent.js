@@ -51,3 +51,20 @@ let headerNav = document.getElementById("nav");
 let slider = document.getElementById("slider");
 
 slider.addEventListener("wheel",slideDiv);
+
+document.querySelectorAll(".container.nav>ul>li").forEach(function(el, index){
+	if(index = 4){
+		el.addEventListener("click", function(){
+			slider.classList.remove("slider", "slider1", "slider2", "slider4", "slider5");
+			slider.classList.add("slider3");
+			console.log(slider);
+		})
+	}
+	if(index = 5){
+		el.addEventListener("click", function(){
+			slider.classList.remove("slider", "slider1", "slider2", "slider3", "slider5");
+			slider.classList.add("slider4");
+			console.log(slider);
+		})
+	}
+})
