@@ -82,8 +82,8 @@
 /*********** lINK2_LAYER ***********/
 
 .link2_layer {
-  width: 700px;
-  height: 500px;
+  width: 80vw
+  height: 80vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -94,8 +94,8 @@
 }
 
 #map {
-  width: 600px;
-  height: 400px;
+  width: 80%;
+  height: 80%;
   border-radius: 30px;
 }
 
