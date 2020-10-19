@@ -181,7 +181,13 @@ var places = new kakao.maps.services.Places();
 
 places.setMap(map);
 
-places.keywordSearch('동물병원', map);
+var callback = function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+        console.log(result);
+    }
+};
+
+places.keywordSearch('동물병원', callback, map);
 
 </script>
 <script>
