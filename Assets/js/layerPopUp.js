@@ -15,6 +15,7 @@ function chooseLayer(selector){
 }
 
 function layerOn (){
+    console.log("hi");
     const selector = this;
 
     const layer = document.getElementById("layer");

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "../option/color.scss";
+@import "../option/font.scss";
+
+#layer {
+  z-index: 100;
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/********** LINK 1 LAYER **********/
+.link1_layer {
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 130px;
+  border: 5px solid $mainColor;
+  background: $subColor;
+}
+.link1_layer h4 {
+  font-size: 20px;
+  position: absolute;
+  color: $mainColor;
+  top: 14px;
+}
+.link1_layer .textArea {
+  width: 400px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link1_layer .textArea div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link1_form {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.link1_form label {
+  color: white;
+}
+
+.link1_layer form > input,
+.link1_form_exit > input {
+  background: $mainColor;
+  border: 0;
+  border-radius: 5px;
+  padding: 3px 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.textArea form > input {
+  margin-bottom: 5px;
+}
+
+.textArea form > .link1_form_exit {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 14px;
+}
+
+/*********** lINK2_LAYER ***********/
+
+.link2_layer {
+  width: 80vw;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 20px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+.link2_layer .layer_exit {
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 10px;
+  border: 0;
+  background-color: $mainColor;
+  color: white;
+  font-weight: bold;
+}
+
+.link3_layer {
+  width: 700px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.link3_layer .layer_exit {
+  width: 136px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 10px;
+  border: 0;
+  background-color: $mainColor;
+  color: white;
+  font-weight: bold;
+}

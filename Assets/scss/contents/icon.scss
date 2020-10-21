@@ -1,0 +1,20 @@
+.iconRight {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background: none;
+  border-left: 0;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+.iconRight.mainC {
+  border-right: 5px solid $mainColor;
+  border-top: 5px solid $mainColor;
+}
+
+.iconRight.subC {
+  border-right: 5px solid $subColor;
+  border-top: 5px solid $subColor;
+}
