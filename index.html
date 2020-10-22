@@ -102,7 +102,7 @@
                         좋아할까요?</p>
                     </div>
                 </div>
-                <a href="/cats.html">집사가이드 바로가기<button class="iconRight subC"></button></a>
+                <a href="Assets/sub/cats.html">집사가이드 바로가기<button class="iconRight subC"></button></a>
             </div><!-- **********//CONT1 CONTAINER ********** -->
         </article><!-- **********//CONT1********** -->
         <article class="cont2">
@@ -111,7 +111,7 @@
                 <div>
                     <iframe id="youtube_frame" src="https://www.youtube.com/embed/_MVBOrtcNis?autoplay=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <a href="/Guardian.html">집사들 구경하러 가기<button class="iconRight mainC"></button></a>
+                <a href="Assets/sub/Gardian.html">집사들 구경하러 가기<button class="iconRight mainC"></button></a>
             </div><!-- **********//CONT2 CONTAINER ********** -->
         </article><!-- **********//CONT2********** -->
         <article class="cont3">
@@ -402,6 +402,24 @@ while (el.hasChildNodes()) {
     document.addEventListener('keydown', function(){
         if(event.keyCode == 9){alert("이 페이지는 TAP키를 지원하지 않습니다.";)}})
 </script>
+<script>
+    function pageLoad(){
+        const url = window.location.href;
+        const nameLocation = url.indexOf("?") + 1;
+        const name = url.substring(nameLocation)
 
+        if(name == "shop"){
+			slider.classList.remove("slider", "slider1", "slider2", "slider3", "slider4", "slider5");
+			slider.classList.add("slider3");
+			console.log(slider);
+		}else if(name == "support"){
+			slider.classList.remove("slider", "slider1", "slider2", "slider3", "slider4", "slider5");
+			slider.classList.add("slider4");
+			console.log(slider);
+        }
+    }
+
+    pageLoad();
+</script>
 </body>
 </html>

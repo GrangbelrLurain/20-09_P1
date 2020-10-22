@@ -4,25 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cats : Cat Supporters</title>
-  <link rel="stylesheet" href="/Assets/css/">
+  <link rel="stylesheet" href="/Assets/css/cats.css">
 </head>
 <body>
   <div id="wrap">
     <header>
-		<div class="container">
-      <div class="header">
-          <ul>
-              <li><a href="/Assets/sub/cats.html">Cats</a></li>
-              <li><a href="/Assets/sub/Gardian.html">Guardian</a></li>
-              <li><img src="/Assets/img/h_logo.png" alt="logo" class="homeLink"></li>
-              <li class="shopLink">Shop</li>
-              <li class="supportLink">Support</li>
-          </ul>
+      <div class="container">
+        <div class="header">
+            <ul>
+                <li><a href="/Assets/sub/cats.html">Cats</a></li>
+                <li><a href="/Assets/sub/Gardian.html">Guardian</a></li>
+                <li><a href="/index.html"><img src="/Assets/img/h_logo.png" alt="logo" class="homeLink"></a></li>
+                <li><a href="/index.html?shop">Shop</a></li>
+                <li><a href="/index.html?support">Support</a></li>
+            </ul>
+        </div>
       </div>
-</div>
     </header>
-    <section #contents></section>
-    <footer></footer>
+    <section id="contents">
+      <div class="container">
+        <div class="contents">
+          <article class="cont">
+            <form>
+              <input type="text" name="title" id="title">
+              <input type="text" name="text" id="text">
+              <button>작성완료</button>
+            </form>
+          </article>
+          <article class="cont">
+            <h3>ㅎㅇ</h3>
+            <div class="contPreview">
+              안녕하세요.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+      <div class="f_logo">
+          <img src="/Assets/img/logo.png" alt="footer logo">
+      </div>
+      <div class="sns">
+          <button><img src="/Assets/img/sns_f.png"></button>
+          <button><img  src="/Assets/img/sns_i.png"></button>
+          <button><img  src="/Assets/img/sns_t.png"></button>
+          <button><img  src="/Assets/img/sns_y.png"></button>
+      </div>
+      <p class="copy">
+      인천광역시 부평구/1544-0000<br>
+      copylightⓒHelloMorning
+      </p>
+      </div>
+  </footer><!-- // FOOTER -->
   </div>
+  <script>
+    let form = document.querySelector("form");
+
+    form.addEventListener('submit', function callBack(e)
+      {
+        e.preventDefault();
+        addCont();
+      });
+
+  function addCont(){
+      
+      const title = document.getElementById("title");
+      const text = document.getElementById("text");
+
+      const contentsList = document.querySelector(".contents");
+      
+      const newContents = document.createElement("article");
+      newContents.classList.add("cont");
+      contentsList.appendChild(newContents);
+    }
+
+    
+    function addContText(){
+      const newHead = document.createElement("h3");
+      const newText = document.createElement("div");
+      newText.classList.add("contPreview");
+
+      newHead.appendChild(newContents);
+      newText.appendChild(newContents);
+    }
+</script>
 </body>
 </html>

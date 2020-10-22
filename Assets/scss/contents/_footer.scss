@@ -1,0 +1,36 @@
+footer .container {
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .container .f_logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+footer .container .sns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+footer .container .sns button {
+  margin: 0 10px;
+  border: none;
+  background: none;
+  height: 40px;
+  width: 40px;
+}
+
+footer .container p {
+  display: block;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

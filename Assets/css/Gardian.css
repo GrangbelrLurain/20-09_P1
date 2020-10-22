@@ -145,6 +145,31 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: #ebb4ad;
+}
+
+header {
+  background: #423e49;
+}
+
+#contents {
+  padding-top: 70px;
+}
+
+footer {
+  height: 500px;
+  background: #423e49;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* HEADER */
 #wrap > div > header,
 #wrap > div > footer {
   display: -webkit-box;
@@ -223,58 +248,99 @@ header .container .header ul:hover li a {
   text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5);
 }
 
-body {
-  background: #ebb4ad;
-}
-
-header {
-  background: #423e49;
-}
-
-footer {
-  height: 500px;
-  background: #423e49;
-}
-
-#contents {
-  padding: 70px 0;
-  height: 2000px;
-}
-
+/* CONTENTS */
 #contents .container {
-  max-width: 1280px;
   width: 100vw;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
 }
 
-#contents .container .cont {
-  margin-top: 50px;
-  height: 140px;
-  width: 90vw;
-  max-width: 1200px;
-  padding: 30px;
-  border-radius: 40px;
-  background: white;
+#contents .container .contents {
+  width: inherit;
+  max-width: 1280px;
+  height: 890px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
 }
 
-#contents .container .cont form #title {
-  width: 98.5%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+#contents .container .contents #Youtube {
+  width: 100vw;
+  height: 100%;
+  margin-bottom: 120px;
 }
 
-#contents .container .cont form #text {
-  margin: 5px 0;
-  padding: 5px;
-  width: 98.5%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  height: 60px;
+#contents .container .contents #Youtube #youtube_frame {
+  width: 100%;
+  height: 100%;
 }
 
+#contents .container .contents .Gardians {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 20px;
+  background: #423e49;
+}
+
+#contents .container .contents .Gardians div {
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+#contents .container .contents .Gardians div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#contents .container .contents .Gardians div img {
+  border-radius: 50%;
+}
+
+#contents .container .contents .Gardians div p {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: "나눔스퀘어-extrabold";
+  font-weight: bold;
+  color: white;
+  line-height: 88px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#contents .container .contents .Gardians div p:hover {
+  opacity: 1;
+}
+
+/* FOOTER */
 footer .container {
   height: 500px;
   display: -webkit-box;

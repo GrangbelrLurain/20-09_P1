@@ -4,8 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gardians : Cat Supporters</title>
+  <link rel="stylesheet" href="../css/Gardian.css">
 </head>
 <body>
-  
+  <div id="wrap">
+    <header>
+      <div class="container">
+        <div class="header">
+            <ul>
+              <li><a href="/Assets/sub/cats.html">Cats</a></li>
+              <li><a href="/Assets/sub/Gardian.html">Guardian</a></li>
+              <li><a href="/index.html"><img src="/Assets/img/h_logo.png" alt="logo" class="homeLink"></a></li>
+              <li><a href="/index.html?shop">Shop</a></li>
+              <li><a href="/index.html?support">Support</a></li>
+            </ul>
+        </div>
+      </div>
+    </header>
+    <main id="contents">
+      <div class="container">
+        <div class="contents">
+          <article id="Youtube">
+            <iframe id="youtube_frame" src="https://www.youtube.com/embed/_MVBOrtcNis?autoplay=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </article>
+          <article class="Gardians">
+            <div class="gardian1">
+              <img src="/Assets/img/gardians/logo01.jpg" alt="유튜브 고양이산책">
+              <p>고양이산책</p>
+            </div>
+            <div class="gardian2">
+              <img src="/Assets/img/gardians/logo02.jpg" alt="유튜브 그루밍데이">
+              <p>그루밍데이</p>
+            </div>
+            <div class="gardian3">
+              <img src="/Assets/img/gardians/logo03.jpg" alt="유튜브 팩토리치즈스">
+              <p>팩토리치즈스</p>
+            </div>
+            <div class="gardian4">
+              <img src="/Assets/img/gardians/logo04.jpg" alt="유튜브 크집사">
+              <p>크집사</p>
+            </div>
+            <div class="gardian5">
+              <img src="/Assets/img/gardians/logo05.jpg" alt="유튜브 크림히어로즈">
+              <p>크림히어로즈</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+      <div class="f_logo">
+          <img src="/Assets/img/logo.png" alt="footer logo">
+      </div>
+      <div class="sns">
+          <button><img src="/Assets/img/sns_f.png"></button>
+          <button><img  src="/Assets/img/sns_i.png"></button>
+          <button><img  src="/Assets/img/sns_t.png"></button>
+          <button><img  src="/Assets/img/sns_y.png"></button>
+      </div>
+      <p class="copy">
+      인천광역시 부평구/1544-0000<br>
+      copylightⓒHelloMorning
+      </p>
+      </div>
+  </footer><!-- // FOOTER -->
+  </div>
+  <script>
+    const youtube = document.getElementById("youtube_frame");
+    
+    document.querySelectorAll(".Gardians>div").forEach(function(elem, index){
+      const select = elem;
+      const selectIndex = index;
+
+      elem.addEventListener("click",function(){
+        if (selectIndex == 0){
+          youtube.src = "https://www.youtube.com/embed/Vf0F4bu-K08"
+        } else
+        if (selectIndex == 1){
+          youtube.src = "https://www.youtube.com/embed/E3jhB5Uou6E"
+        } else
+        if (selectIndex == 2){
+          youtube.src = "https://www.youtube.com/embed/6DD-HywRF2w"
+        } else
+        if (selectIndex == 3){
+          youtube.src = "https://www.youtube.com/embed/_MVBOrtcNis?autoplay=0"
+        } else
+        if (selectIndex == 4){
+          youtube.src = "https://www.youtube.com/embed/Y80SPEXc9EE"
+        }
+      })
+    })
+    
+  </script>
 </body>
 </html>

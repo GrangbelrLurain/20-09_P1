@@ -1,6 +1,64 @@
 @charset "UTF-8";
 
-@import "../option/color.scss";
-@import "../option/font.scss";
-@import "../RESET/RESET.scss";
-@import "../contents/header.scss";
+@import "../option/_color.scss";
+@import "../option/_font.scss";
+@import "../RESET/_RESET.scss";
+@import "../contents/_header.scss";
+
+body {
+  background: $mainColor;
+}
+
+header {
+  background: $subColor;
+}
+
+footer {
+  height: 500px;
+  background: $subColor;
+}
+
+#contents {
+  padding: 70px 0;
+  height: 2000px;
+
+  $containerWidth: 1280px;
+  .container {
+    max-width: $containerWidth;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+
+    .cont {
+      margin-top: 50px;
+      height: 140px;
+      width: 90vw;
+      max-width: ($containerWidth - 80px);
+      padding: 30px;
+      border-radius: 40px;
+      background: white;
+
+      form #title {
+        width: 98.5%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      form #text {
+        margin: 5px 0;
+        padding: 5px;
+        width: 98.5%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        height: 60px;
+      }
+
+      .contPreview {
+      }
+    }
+  }
+}
+
+@import "footer";
