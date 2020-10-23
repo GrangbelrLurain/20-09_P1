@@ -1042,14 +1042,24 @@ footer .container p {
     width: 92vw;
   }
   #contents .cont1 .container .like > div {
-    width: 23vh;
-    height: 23vh;
+    position: relative;
+    width: 30vw;
+    max-width: 40vh;
+    height: 30vw;
+    max-height: 40vh;
   }
   #contents .cont1 .container > .like > div > p {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     margin-top: 0;
-    padding: 12vh 1vh;
-    width: 28vh;
-    height: 6vh;
+    padding: 20vh 3vh;
+    width: 34vh;
+    height: 5vh;
     font-size: 24px;
   }
 }
@@ -1083,6 +1093,11 @@ footer .container p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #contents .cont1 .container > .like > div > p {
+    padding: 20vw 10vw;
+    width: 28vw;
+    height: 5vw;
   }
   #contents .cont1 .container > div > div:nth-of-type(1) {
     margin-right: 0;
@@ -1147,6 +1162,12 @@ footer .container p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #contents .cont1 .container > .like > div > p {
+    padding: 50% 0;
+    width: 100%;
+    height: 20%;
+    font-size: 5vw;
   }
   #contents .cont1 .container a {
     font-size: 7vw;
