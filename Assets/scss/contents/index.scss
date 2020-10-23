@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*********** 나눔 폰트 적용 ***********/
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
@@ -5,8 +7,9 @@
 @import "../option/_font.scss";
 @import "../RESET/_RESET.scss";
 @import "../contents/_icon.scss";
-@import "../layout/layout.scss";
+@import "../layout/_layout.scss";
 @import "../contents/_header.scss";
+@import "../contents/layerPopUp";
 
 #banner {
   background: url(../img/banner.jpg);
