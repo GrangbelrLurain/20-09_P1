@@ -115,8 +115,8 @@
 }
 
 .link3_layer {
-  width: 900px;
-  height: 400px;
+  width: 700px;
+  height: 540px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -151,34 +151,39 @@
   }
   > ul {
     margin-top: 45px;
+    width: 600px;
     padding: 20px;
     border-radius: 10px;
     background: #fff;
     display: flex;
     > li {
+      font-size: $F7;
       &.active > ul {
         display: block;
       }
       > ul {
+        width: 600px;
         display: none;
         > li {
           margin-bottom: 14px;
+          margin-left: 6px;
           > a {
-            display: block;
             overflow: hidden;
+            line-height: 26px;
             font-size: $F7;
             text-align: right;
             width: 100%;
             > strong {
+              text-align: center;
               margin-right: 100px;
               font-size: $F6;
-              float: left;
             }
             > span {
+              float: right;
               font-size: $F6;
               font-weight: bold;
+              color: $mainColor;
             }
-            &:hover,
             &:hover strong,
             &:hover span {
               color: $mainColor;

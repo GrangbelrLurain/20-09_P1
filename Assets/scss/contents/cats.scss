@@ -23,16 +23,9 @@ footer {
   transition: 2s;
 
   $containerWidth: 1280px;
-  .container {
-    max-width: $containerWidth;
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-
+  .contentsAdd {
     .cont {
       margin-top: 50px;
-      height: 140px;
       width: 90vw;
       max-width: ($containerWidth - 80px);
       padding: 30px;
@@ -54,8 +47,34 @@ footer {
         border-radius: 10px;
         height: 60px;
       }
+    }
+  }
+  .container {
+    max-width: $containerWidth;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    .contents {
+      display: flex;
+      flex-direction: column-reverse;
 
-      .contPreview {
+      .cont {
+        margin-top: 50px;
+        width: 90vw;
+        max-width: ($containerWidth - 80px);
+        padding: 30px;
+        border-radius: 40px;
+        background: white;
+
+        h3 {
+          font-size: $F4;
+          line-height: $F2;
+        }
+        .contPreview {
+          line-height: $F5;
+          text-align: justify;
+        }
       }
     }
   }

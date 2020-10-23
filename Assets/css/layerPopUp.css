@@ -149,8 +149,8 @@
 }
 
 .link3_layer {
-  width: 900px;
-  height: 400px;
+  width: 700px;
+  height: 540px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,6 +201,7 @@
 
 .link3_layer > ul {
   margin-top: 45px;
+  width: 600px;
   padding: 20px;
   border-radius: 10px;
   background: #fff;
@@ -209,38 +210,45 @@
   display: flex;
 }
 
+.link3_layer > ul > li {
+  font-size: 14px;
+}
+
 .link3_layer > ul > li.active > ul {
   display: block;
 }
 
 .link3_layer > ul > li > ul {
+  width: 600px;
   display: none;
 }
 
 .link3_layer > ul > li > ul > li {
   margin-bottom: 14px;
+  margin-left: 6px;
 }
 
 .link3_layer > ul > li > ul > li > a {
-  display: block;
   overflow: hidden;
+  line-height: 26px;
   font-size: 14px;
   text-align: right;
   width: 100%;
 }
 
 .link3_layer > ul > li > ul > li > a > strong {
+  text-align: center;
   margin-right: 100px;
   font-size: 18px;
-  float: left;
 }
 
 .link3_layer > ul > li > ul > li > a > span {
+  float: right;
   font-size: 18px;
   font-weight: bold;
+  color: #ebb4ad;
 }
 
-.link3_layer > ul > li > ul > li > a:hover,
 .link3_layer > ul > li > ul > li > a:hover strong,
 .link3_layer > ul > li > ul > li > a:hover span {
   color: #ebb4ad;

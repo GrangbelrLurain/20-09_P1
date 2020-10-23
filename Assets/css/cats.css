@@ -242,6 +242,31 @@ footer {
   transition: 2s;
 }
 
+#contents .contentsAdd .cont {
+  margin-top: 50px;
+  width: 90vw;
+  max-width: 1200px;
+  padding: 30px;
+  border-radius: 40px;
+  background: white;
+}
+
+#contents .contentsAdd .cont form #title {
+  width: 98.5%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#contents .contentsAdd .cont form #text {
+  margin: 5px 0;
+  padding: 5px;
+  width: 98.5%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 60px;
+}
+
 #contents .container {
   max-width: 1280px;
   width: 100vw;
@@ -250,9 +275,18 @@ footer {
   padding: 0;
 }
 
-#contents .container .cont {
+#contents .container .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+#contents .container .contents .cont {
   margin-top: 50px;
-  height: 140px;
   width: 90vw;
   max-width: 1200px;
   padding: 30px;
@@ -260,20 +294,14 @@ footer {
   background: white;
 }
 
-#contents .container .cont form #title {
-  width: 98.5%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+#contents .container .contents .cont h3 {
+  font-size: 28px;
+  line-height: 50px;
 }
 
-#contents .container .cont form #text {
-  margin: 5px 0;
-  padding: 5px;
-  width: 98.5%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  height: 60px;
+#contents .container .contents .cont .contPreview {
+  line-height: 24px;
+  text-align: justify;
 }
 
 footer .container {
