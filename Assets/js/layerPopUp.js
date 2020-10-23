@@ -18,12 +18,12 @@ function chooseLayer(selector){
         map.relayout();
         map.setLevel(12);
         map.relayout();
+        console.log("hi");
         }
     })
 }
 
 function layerOn (){
-    console.log("hi");
     const selector = this;
 
     const layer = document.getElementById("layer");
