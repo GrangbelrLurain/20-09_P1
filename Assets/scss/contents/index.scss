@@ -24,6 +24,7 @@
 
 #contents {
   height: 4320px;
+  position: relative;
   background-position: center center;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
@@ -157,8 +158,11 @@ footer {
   border: 15px solid $subColor;
   margin: 0 auto;
   margin-top: 50px;
-  width: 978px;
-  height: 550px;
+  max-width: 978px;
+  width: 100vw;
+  box-sizing: border-box;
+  max-height: 550px;
+  height: 55vw;
 }
 
 #contents .cont2 .container div iframe {

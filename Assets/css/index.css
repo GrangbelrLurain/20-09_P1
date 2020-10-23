@@ -539,6 +539,7 @@ header .container .header ul:hover li a {
 
 #contents {
   height: 4320px;
+  position: relative;
   background-position: center center;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
@@ -701,8 +702,12 @@ footer {
   border: 15px solid #423e49;
   margin: 0 auto;
   margin-top: 50px;
-  width: 978px;
-  height: 550px;
+  max-width: 978px;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 550px;
+  height: 55vw;
 }
 
 #contents .cont2 .container div iframe {
@@ -1018,88 +1023,71 @@ footer .container p {
   }
 }
 
-/*
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
   .container {
     width: 100vw;
+    padding: 40px;
     height: 100%;
-    overflow: hidden;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-
-  header {
-    height: 50px;
-    width: 100vw;
-    bottom: 0;
+  #contents .cont1 .container .like {
+    width: 92vw;
   }
-  .header ul li a {
-    font-size: 14px;
+  #contents .cont1 .container .like > div {
+    width: 23vh;
+    height: 23vh;
   }
-  .header ul > li > img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .header #contents .cont1 .container > div > div {
-    width: 33vw;
-    height: 33vw;
-  }
-
-  #contents .cont1 .container a {
-    margin-right: 20px;
-  }
-
-  #contents .cont2 .container h3 {
-    text-align: center;
-  }
-
-  #contents .cont2 .container a {
-    margin-right: 20px;
-  }
-
-  #contents .cont3 .container .shop_box {
-    justify-content: space-between;
-  }
-
-  #contents .cont3 .container .shop1 {
-    line-height: 10vh;
-    margin-left: 10px;
-    width: 10vh;
-    height: 10vh;
-  }
-
-  #contents .cont3 .container .shop2 {
-    margin-left: 500px;
-  }
-
-  #contents .cont3 .container .shop3 {
-    margin-right: 50px;
+  #contents .cont1 .container > .like > div > p {
+    margin-top: 0;
+    padding: 12vh 1vh;
+    width: 28vh;
+    height: 6vh;
+    font-size: 24px;
   }
 }
 
-@media (max-width: 776px) {
-  header {
-    height: 70px;
+@media (max-width: 1000px) {
+  .container {
+    width: 100vw;
+    padding: 10px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
   }
-
-  header > .container > ul > li > img {
-    width: 70px;
-    height: 70px;
-  }
-
   #contents .cont1 .container .like {
-    flex-direction: column;
-    align-items: center;
+    width: 98vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #contents .cont1 .container .like > div {
-    width: 25vh;
-    height: 25vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #contents .cont1 .container > div > div:nth-of-type(1) {
     margin-right: 0;
     margin-left: auto;
     background-size: contain;
   }
-
   #contents .cont1 .container > div > div:nth-of-type(2) {
     background-size: contain;
   }
@@ -1108,29 +1096,9 @@ footer .container p {
     margin-right: auto;
     margin-left: 0;
   }
-
-  button {
-    display: none;
-  }
 }
 
-@media (max-width: 776px) {
-  #banner {
-    height: 80vh;
-  }
-
-  #banner p {
-    font-size: 5vw;
-  }
-}
-*/
 @media (max-width: 700px) {
-  .container {
-    width: 100vw;
-    padding: 10px;
-    height: 100%;
-    overflow: hidden;
-  }
   header,
   header .container {
     height: 70px;
@@ -1157,6 +1125,7 @@ footer .container p {
     font-size: 9vw;
   }
   #contents .cont1 .container .like {
+    width: 98vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1178,28 +1147,9 @@ footer .container p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #contents .cont1 .container > .like > div > p {
-    margin-top: 0;
-    padding: 12vh 1vh;
-    width: 28vh;
-    height: 6vh;
-    font-size: 5vw;
-  }
-  #contents .cont1 .container > div > div:nth-of-type(1) {
-    margin-right: 0;
-    margin-left: auto;
-    background-size: contain;
-  }
-  #contents .cont1 .container > div > div:nth-of-type(2) {
-    background-size: contain;
-  }
-  #contents .cont1 .container > div > div:nth-of-type(3) {
-    background-size: contain;
-    margin-right: auto;
-    margin-left: 0;
-  }
   #contents .cont1 .container a {
     font-size: 7vw;
+    margin-right: 20px;
   }
   #contents .cont2 .container h3 {
     font-size: 9vw;
@@ -1214,6 +1164,7 @@ footer .container p {
   }
   #contents .cont2 .container a {
     font-size: 7vw;
+    margin-right: 20px;
   }
   #contents .cont3 .container h3 {
     font-size: 9vw;
@@ -1252,24 +1203,45 @@ footer .container p {
     background-size: 50vw 50vw;
     bottom: 35vh;
   }
+  #contents .conn4 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   #contents .cont4 .container h3 {
     margin-top: 70px;
-    width: 100vw;
+    width: 90vw;
     font-size: 14vw;
   }
   #contents .cont4 .container h3 img {
     display: none;
   }
   #contents .cont4 .container > div {
-    margin-top: 50px;
+    margin-top: 100px;
+    width: 100%;
+    bottom: 100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   #contents .cont4 .container > div > div > img {
-    height: 22vh;
-    width: 22vh;
+    height: 60vw;
+    max-height: 25vh;
+    width: 60vw;
+    max-width: 25vh;
   }
   #contents .cont4 .container div > div > h5 {
     font-size: 7vw;
