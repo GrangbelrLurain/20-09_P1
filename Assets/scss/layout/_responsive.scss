@@ -190,12 +190,15 @@
   }
   
   #contents .cont3 .container h3 {
+    margin-top: 40px;
     font-size: $fsizeSubT;
   }
 
   #contents .cont3 .container .shop_box{
+    margin-top: 40px;
     width: 90vw;
-    padding: 150px 10px;
+    height: 600px;
+    padding: 0 10px;
   }
 
   #contents .cont3 .container .shop_box > div{
@@ -203,19 +206,25 @@
   }
 
   #contents .cont3 .container .shop_box .shop1 {
-    width: 27vw;
-    height: 27vw;
+    width: 27vh;
+    max-width: 40vw;
+    height: 27vh;
+    max-height: 40vw;
   }
   
   #contents .cont3 .container .shop_box .shop2 {
-    width: 22vw;
-    height: 22vw;
+    width: 22vh;
+    max-width: 35vw;
+    height: 22vh;
+    max-height: 35vw;
   }
   
   #contents .cont3>.container>.shop_box>.shop3 {
     align-self: center;
-    width: 30vw;
-    height: 30vw;
+    width: 30vh;
+    max-width: 45vw;
+    height: 30vh;
+    max-height: 45vw;
   }
 
   #contents .cont3 .container > div > div > p {
@@ -230,7 +239,7 @@
 
   #contents .cont3 .container #cont3_img {
     background-size: 50vw 50vw;
-    bottom: 35vh;
+    bottom: 220px;
   }
 
   #contents .conn4 .container {
