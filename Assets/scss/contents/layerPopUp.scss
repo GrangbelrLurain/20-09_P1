@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import "../option/color.scss";
-@import "../option/font.scss";
+@import "../option/_color.scss";
+@import "../option/_font.scss";
 
 #layer {
   z-index: 100;
@@ -17,7 +17,7 @@
   width: 500px;
   height: 400px;
   background-color: white;
-  display: flex;
+  display: none;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,7 @@
   width: 80vw;
   height: 80vh;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -115,8 +115,8 @@
 }
 
 .link3_layer {
-  width: 700px;
-  height: 500px;
+  width: 900px;
+  height: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -124,16 +124,82 @@
   justify-content: center;
   border-radius: 50px;
   background: rgba(0, 0, 0, 0.3);
-}
+  h4 {
+    font-size: $F4;
+    color: $mainColor;
+    position: absolute;
+    top: 20px;
+  }
+  .list {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    h5 {
+      color: white;
+      padding: 5px 10px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-size: $F6;
+      font-weight: bold;
+      background-color: $subColor;
+      cursor: pointer;
 
-.link3_layer .layer_exit {
-  width: 136px;
-  height: 30px;
-  position: absolute;
-  bottom: 10px;
-  border-radius: 10px;
-  border: 0;
-  background-color: $mainColor;
-  color: white;
-  font-weight: bold;
+      &.active {
+        background: $mainColor;
+      }
+    }
+  }
+  > ul {
+    margin-top: 45px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    > li {
+      &.active > ul {
+        display: block;
+      }
+      > ul {
+        display: none;
+        > li {
+          margin-bottom: 14px;
+          > a {
+            display: block;
+            overflow: hidden;
+            font-size: $F7;
+            text-align: right;
+            width: 100%;
+            > strong {
+              margin-right: 100px;
+              font-size: $F6;
+              float: left;
+            }
+            > span {
+              font-size: $F6;
+              font-weight: bold;
+            }
+            &:hover,
+            &:hover strong,
+            &:hover span {
+              color: $mainColor;
+            }
+          }
+          &:last-of-type li {
+            margin-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  .layer_exit {
+    width: 136px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 0;
+    background-color: $mainColor;
+    color: white;
+    font-weight: bold;
+  }
 }

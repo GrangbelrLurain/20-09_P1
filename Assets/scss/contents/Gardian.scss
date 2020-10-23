@@ -6,6 +6,7 @@
 
 body {
   background: $mainColor;
+  overflow-x: hidden;
 }
 
 header {
@@ -18,6 +19,7 @@ header {
 
 footer {
   height: 500px;
+  width: 100vw;
   background: $subColor;
 }
 
@@ -61,7 +63,7 @@ footer {
       display: flex;
       justify-content: center;
       width: 100vw;
-      padding: 20px;
+      padding: 20px 0;
       background: $subColor;
 
       div {

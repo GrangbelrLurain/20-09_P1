@@ -238,7 +238,8 @@ footer {
 
 #contents {
   padding: 70px 0;
-  height: 2000px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 #contents .container {

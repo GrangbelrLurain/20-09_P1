@@ -69,25 +69,38 @@
 
   function addCont(){
       
-      const title = document.getElementById("title");
-      const text = document.getElementById("text");
-
       const contentsList = document.querySelector(".contents");
       
       const newContents = document.createElement("article");
-      newContents.classList.add("cont");
-      contentsList.appendChild(newContents);
-    }
-
-    
-    function addContText(){
       const newHead = document.createElement("h3");
       const newText = document.createElement("div");
+
+      newContents.appendChild(newHead);
+      newContents.appendChild(newText);
+
+      contentsList.appendChild(newContents);
+
+      newContents.classList.add("cont");
       newText.classList.add("contPreview");
 
-      newHead.appendChild(newContents);
-      newText.appendChild(newContents);
+      textCreate(newHead, newText);
+
     }
+
+  function textCreate(Head, Text){
+
+    const newHead = Head;
+    const newText = Text;
+
+    const title = document.getElementById("title");
+    const text = document.getElementById("text");
+
+    newHead.innerText = title.value;
+    newText.innerText = text.value;
+
+    title.value = null;
+    text.value = null;
+  }
 </script>
 </body>
 </html>

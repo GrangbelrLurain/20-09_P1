@@ -147,6 +147,7 @@ a {
 
 body {
   background: #ebb4ad;
+  overflow-x: hidden;
 }
 
 header {
@@ -159,6 +160,7 @@ header {
 
 footer {
   height: 500px;
+  width: 100vw;
   background: #423e49;
 }
 
@@ -294,7 +296,7 @@ header .container .header ul:hover li a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100vw;
-  padding: 20px;
+  padding: 20px 0;
   background: #423e49;
 }
 

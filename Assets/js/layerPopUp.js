@@ -48,3 +48,29 @@ function layerExit (){
 layerExitBtn.forEach(function (Elem){
     Elem.addEventListener("click", layerExit);
 });
+
+
+// layer Pop UP link notice
+
+const noticeList=document.querySelectorAll(".link3_layer>.list>h5")
+noticeList.forEach(function(elem, index){
+
+    const eventElem = elem
+    const eventIndex = index;
+
+    elem.addEventListener("click", function(){
+        
+        const notice = document.querySelectorAll(".link3_layer>ul>li")
+        notice.forEach(function(elem, index){
+            if(index == eventIndex){
+                elem.classList.add("active");
+            }else{
+                elem.classList.remove("active");
+            }
+        })
+        noticeList.forEach(function(elem){
+            elem.classList.remove("active");
+        })
+        eventElem.classList.add("active");
+    })
+})

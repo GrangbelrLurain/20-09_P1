@@ -18,9 +18,7 @@
   width: 500px;
   height: 400px;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -115,9 +113,7 @@
   width: 80vw;
   height: 80vh;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -153,8 +149,8 @@
 }
 
 .link3_layer {
-  width: 700px;
-  height: 500px;
+  width: 900px;
+  height: 400px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,6 +167,87 @@
           justify-content: center;
   border-radius: 50px;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.link3_layer h4 {
+  font-size: 28px;
+  color: #ebb4ad;
+  position: absolute;
+  top: 20px;
+}
+
+.link3_layer .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 70px;
+}
+
+.link3_layer .list h5 {
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #423e49;
+  cursor: pointer;
+}
+
+.link3_layer .list h5.active {
+  background: #ebb4ad;
+}
+
+.link3_layer > ul {
+  margin-top: 45px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.link3_layer > ul > li.active > ul {
+  display: block;
+}
+
+.link3_layer > ul > li > ul {
+  display: none;
+}
+
+.link3_layer > ul > li > ul > li {
+  margin-bottom: 14px;
+}
+
+.link3_layer > ul > li > ul > li > a {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  text-align: right;
+  width: 100%;
+}
+
+.link3_layer > ul > li > ul > li > a > strong {
+  margin-right: 100px;
+  font-size: 18px;
+  float: left;
+}
+
+.link3_layer > ul > li > ul > li > a > span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.link3_layer > ul > li > ul > li > a:hover,
+.link3_layer > ul > li > ul > li > a:hover strong,
+.link3_layer > ul > li > ul > li > a:hover span {
+  color: #ebb4ad;
+}
+
+.link3_layer > ul > li > ul > li:last-of-type li {
+  margin-bottom: none;
 }
 
 .link3_layer .layer_exit {
