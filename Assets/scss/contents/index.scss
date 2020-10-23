@@ -51,7 +51,7 @@ footer {
   p {
     display: block;
     color: #fff;
-    font-size: $fsizeBanner;
+    font-size: $fsizeBanner;  
     font-weight: bold;
   }
 }
@@ -298,8 +298,6 @@ footer {
 #contents .cont3 .container .cont3_img3 {
   background: url(../img/contents/cat-bag.jpg);
 }
-#contents .cont3 .container .cont3_text {
-}
 #contents .cont3 .container .cont3_text > p {
   max-width: 1280px;
   width: 100vw;
@@ -370,3 +368,4 @@ footer {
 
 /*********** footer ***********/
 @import "footer";
+@import "../layout/responsive";
