@@ -407,43 +407,8 @@
 <script type="text/javascript" src="Assets/js/layerPopUp.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=142c0992495e1e0122781be94e608010"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
-<script>
-var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-var options = { //지도를 생성할 때 필요한 기본 옵션
-	center: new kakao.maps.LatLng(37.545038, 126.846919), //지도의 중심좌표.
-	level: 10 //지도의 레벨(확대, 축소 정도)
-};
-
-var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-var places = new kakao.maps.services.Places();
-
-var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-
-</script>
-<script>
-    window.addEventListener('onKeyDown', function(e){
-        const keyCode = e.keyCode;
-        console.log("hello");
-        if(event.keyC   ode == 9){alert("이 페이지는 TAP키를 지원하지 않습니다.");}})
-</script>
-<script>
-    function pageLoad(){
-        const url = window.location.href;
-        const nameLocation = url.indexOf("?") + 1;
-        const name = url.substring(nameLocation)
-
-        if(name == "shop"){
-			slider.classList.remove("slider", "slider1", "slider2", "slider3", "slider4", "slider5");
-			slider.classList.add("slider3");
-			console.log(slider);
-		}else if(name == "support"){
-			slider.classList.remove("slider", "slider1", "slider2", "slider3", "slider4", "slider5");
-			slider.classList.add("slider4");
-			console.log(slider);
-        }
-    }
-
-    pageLoad();
-</script>
+<script type="text/javascript" src="Assets/js/kakaomapLoad.js"></script>
+<script type="text/javascript" src="Assets/js/tapKeyEvent.js"></script>
+<script type="text/javascript" src="Assets/js/pageLoadEvent.js"></script>
 </body>
 </html>
