@@ -259,6 +259,7 @@
 }
 
 .link3_layer .layer_exit {
+  z-index: 100;
   width: 136px;
   height: 30px;
   position: absolute;
