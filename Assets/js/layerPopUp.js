@@ -11,6 +11,14 @@ function chooseLayer(selector){
         }else{
             layers[index].style.display = "none";
         }
+        if(selector == 1){
+        searchPlaces();
+        map.setCenter(coords);
+        map.setLevel(11);
+        map.relayout();
+        map.setLevel(12);
+        map.relayout();
+        }
     })
 }
 
@@ -24,7 +32,7 @@ function layerOn (){
     chooseLayer(selector);
 }
 
-layerOnBtn.forEach(function(Elem, index){
+layerOnBtn.forEach(function(Elem){
     Elem.addEventListener("click", layerOn);
 });
 
